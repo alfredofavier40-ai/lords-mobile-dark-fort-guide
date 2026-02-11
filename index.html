@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Fortaleza Oscura AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <link rel="icon" href="icon-fortaleza.png">
+</head>
+<body>
+  <header>
+    <img src="icon-fortaleza.png" alt="Fortaleza Oscura N6" class="icon">
+    <h1>Guía Fortaleza Oscura Nivel 6</h1>
+  </header>
+
+  <main>
+    <!-- Tipo de jugador -->
+    <label>Tipo de jugador:</label>
+    <select id="player">
+      <option value="f2p">F2P</option>
+      <option value="p2p">P2P</option>
+    </select>
+
+    <!-- Subir captura de fortaleza -->
+    <label>Sube captura de fortaleza:</label>
+    <input type="file" id="fortalezaImg" accept="image/*">
+    <button onclick="procesarFortaleza()">Analizar fortaleza</button>
+
+    <!-- Subir captura de armaduras -->
+    <label>Sube captura de tus armaduras:</label>
+    <input type="file" id="armaduraImg" accept="image/*">
+    <button onclick="procesarArmadura()">Analizar armadura</button>
+
+    <!-- Tipo de tropas -->
+    <label>Tipo de tropas:</label>
+    <select id="tropas">
+      <option value="t4">T4</option>
+      <option value="t5">T5</option>
+    </select>
+
+    <!-- Calcular ataque -->
+    <button onclick="calcular()">Calcular Ataque</button>
+
+    <!-- Resultado -->
+    <div id="resultado"></div>
+  </main>
+
+  <script src="data/heroes.js"></script>
+  <script src="data/nests.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
